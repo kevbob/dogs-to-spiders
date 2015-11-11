@@ -4,8 +4,8 @@
 	"name": "Dogs to spiders",
     "short_name": "Spiders",
 	"description": "Replaces the text 'Dog' with 'Spider', based on Snake People by Eric Bailey",
-	"author": "Eric Bailey",
-	"version": "0.0.1",
+	"author": "Stephen Woods",
+	"version": "1.0.0",
 
 	"icons": {
 		"16": "icon16.png",
