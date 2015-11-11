@@ -30,6 +30,10 @@ function replaceText(v)
     v = v.replace(/\bBark?\b/g, "Hiss");
     v = v.replace(/\btail?\b/g, "abdomen");
     v = v.replace(/\btounge?\b/g, "pedipalps");
+    v = v.replace(/\b(G|g)reat (D|d)ane\b/g, "tarantula");
+    v = v.replace(/\bchihuahua\b/g, "black widow");
+    v = v.replace(/\bChihuahua\b/g, "Black widow");
+
 //four-legged
 ////arachnid
     return v;
