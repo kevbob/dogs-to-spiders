@@ -1,6 +1,6 @@
-# Millennials to Snake People
+# Dog to spider
 
-Browser extension that reveals the *real* truth behind Millennials.
+Dogs to spiders, fork of https://github.com/ericwbailey/millennials-to-snake-people
 
 
 ## Installation

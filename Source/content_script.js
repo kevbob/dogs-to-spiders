@@ -22,9 +22,12 @@ function handleText(textNode) {
 function replaceText(v)
 {
     // Fix some misspellings
-    v = v.replace(/\b(D|d)og(s)?\b/g, "spider$2");
-    
-
+    v = v.replace(/\bDog(s)?\b/g, "Spider$1");
+    v = v.replace(/\bdog(s)?\b/g, "spider$1");
+    v = v.replace(/\bfour-legged?\b/g, "eight-legged");
+    v = v.replace(/\b(C|c)anine?\b/g, "$1anine");
+//four-legged
+////arachnid
     return v;
 }
 
