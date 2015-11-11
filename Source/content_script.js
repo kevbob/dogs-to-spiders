@@ -33,6 +33,33 @@ function replaceText(v)
     v = v.replace(/\b(G|g)reat (D|d)ane\b/g, "tarantula");
     v = v.replace(/\bchihuahua\b/g, "black widow");
     v = v.replace(/\bChihuahua\b/g, "Black widow");
+    v = v.replace(/\bpit bull(s)?\b/g, "brown recluse$1");
+    v = v.replace(/\bPit (B|b)ull(s)?\b/g, "Brown Recluse$2");
+    v = v.replace(/\bPug(s)?\b/g, "Wolf Spider$1");
+    v = v.replace(/\bpug(s)?\b/g, "Wolf spider$1");
+    v = v.replace(/\bPoodle(s)?\b/g, "Common Orb Weaver$1");
+    v = v.replace(/\bpoodle(s)?\b/g, "common orb weaver$1");
+    v = v.replace(/\bGerman Shepherd(s)?\b/g, "Funnel Web Spider$1");
+    v = v.replace(/\bgerman shepherd(s)?\b/g, "funnel web spider$1");
+    
+    v = v.replace(/\bpup(s)?\b/g, "juvenile$1");
+    v = v.replace(/\bPup(s)?\b/g, "Juvenile$1");
+    v = v.replace(/\b(D|d)aschund(s)?\b/g, "$1olomedes spider$2");
+
+
+    //https://www.google.com/search?client=safari&rls=en&q=daschund&ie=UTF-8&oe=UTF-8
+    v = v.replace(/\b(P|p)upp(ies|y)\b/g, function(result) {
+        switch (result) {
+            case 'Puppies':
+                return "Spiderlings";
+            case 'puppies':
+                return 'spiderlings';
+            case 'puppy':
+                return 'spiderling';
+            default:
+                return 'spiderling';
+        }
+    });
 
 //four-legged
 ////arachnid
