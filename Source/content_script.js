@@ -26,6 +26,10 @@ function replaceText(v)
     v = v.replace(/\bdog(s)?\b/g, "spider$1");
     v = v.replace(/\bfour-legged?\b/g, "eight-legged");
     v = v.replace(/\b(C|c)anine?\b/g, "$1anine");
+    v = v.replace(/\bbark?\b/g, "hiss");
+    v = v.replace(/\bBark?\b/g, "Hiss");
+    v = v.replace(/\btail?\b/g, "abdomen");
+    v = v.replace(/\btounge?\b/g, "pedipalps");
 //four-legged
 ////arachnid
     return v;
