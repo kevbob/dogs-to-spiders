@@ -22,7 +22,7 @@ function handleText(textNode) {
 function replaceText(v)
 {
     // Fix some misspellings
-    v = v.replace(/\b(S|s)og(s)?\b/g, "$1pider$2");
+    v = v.replace(/\b(D|d)og(s)?\b/g, "spider$2");
     
 
     return v;
