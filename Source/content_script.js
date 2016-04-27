@@ -46,8 +46,8 @@ function replaceText(v)
     v = v.replace(/\bgerman shepherd(s)?\b/g, "funnel web spider$1");
     v = v.replace(/\bPooches?\b/g, "Eight-legged friends");
     v = v.replace(/\bpooches?\b/g, "eight-legged friends");
-    v = v.replace(/\bPooch?\b/g, "Arachnid pal$1");
-    v = v.replace(/\bpooch?\b/g, "arachnid pal$1");
+    v = v.replace(/\bPooch?\b/g, "Arachnid pal");
+    v = v.replace(/\bpooch?\b/g, "arachnid pal");
     v = v.replace(/\bpup(s)?\b/g, "spiderling$1");
     v = v.replace(/\bPup(s)?\b/g, "Spiderling$1");
     v = v.replace(/\b(D|d)aschund(s)?\b/g, "$1olomedes spider$2");
