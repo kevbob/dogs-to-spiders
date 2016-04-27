@@ -59,8 +59,9 @@ function replaceText(v)
     v = v.replace(/\b(B|b)oxer(s)?\b/g, "$1razilian salmon tarantula$2");
     v = v.replace(/\b(T|t)errier(s)?\b/g, "$1arantula$2");
     v = v.replace(/\b(C|c)orgi(s)?\b/g, "$1ommon house spider$2");
-    v = v.replace(/\bEar(s)?\b/g, "Pedipalp$1");
-    v = v.replace(/\bear(s)?\b/g, "pedipalp$1");
+    v = v.replace(/\b(P|p)aw(s)?\b/g, "$1edipalp$2");
+    v = v.replace(/\bear?\b/g, "seta");
+    v = v.replace(/\bears?\b/g, "setae");
 
 
     //https://www.google.com/search?client=safari&rls=en&q=daschund&ie=UTF-8&oe=UTF-8
