@@ -5,7 +5,7 @@
     "short_name": "Spiders",
 	"description": "Replaces the text 'Dog' with 'Spider', based on Snake People by Eric Bailey",
 	"author": "Stephen Woods",
-	"version": "1.0.0",
+	"version": "1.0.1",
 
 	"icons": {
 		"16": "icon16.png",

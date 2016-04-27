@@ -24,11 +24,14 @@ function replaceText(v)
     // Fix some misspellings
     v = v.replace(/\bDog(s)?\b/g, "Spider$1");
     v = v.replace(/\bdog(s)?\b/g, "spider$1");
+    v = v.replace(/\bDoggy?\b/g, "Spider");
+    v = v.replace(/\bdoggy?\b/g, "spider");
     v = v.replace(/\bfour-legged?\b/g, "eight-legged");
     v = v.replace(/\b(C|c)anine?\b/g, "$1anine");
     v = v.replace(/\bbark?\b/g, "hiss");
     v = v.replace(/\bBark?\b/g, "Hiss");
-    v = v.replace(/\btail?\b/g, "abdomen");
+    v = v.replace(/\btail(s)?\b/g, "abdomen$1");
+    v = v.replace(/\bTail(s)?\b/g, "Abdomen$1");
     v = v.replace(/\btounge?\b/g, "pedipalps");
     v = v.replace(/\b(G|g)reat (D|d)ane\b/g, "tarantula");
     v = v.replace(/\bchihuahua\b/g, "black widow");
@@ -41,10 +44,23 @@ function replaceText(v)
     v = v.replace(/\bpoodle(s)?\b/g, "common orb weaver$1");
     v = v.replace(/\bGerman Shepherd(s)?\b/g, "Funnel Web Spider$1");
     v = v.replace(/\bgerman shepherd(s)?\b/g, "funnel web spider$1");
-    
-    v = v.replace(/\bpup(s)?\b/g, "juvenile$1");
-    v = v.replace(/\bPup(s)?\b/g, "Juvenile$1");
+    v = v.replace(/\bPooches?\b/g, "Eight-legged friends");
+    v = v.replace(/\bpooches?\b/g, "eight-legged friends");
+    v = v.replace(/\bPooch?\b/g, "Arachnid pal$1");
+    v = v.replace(/\bpooch?\b/g, "arachnid pal$1");
+    v = v.replace(/\bpup(s)?\b/g, "spiderling$1");
+    v = v.replace(/\bPup(s)?\b/g, "Spiderling$1");
     v = v.replace(/\b(D|d)aschund(s)?\b/g, "$1olomedes spider$2");
+    v = v.replace(/\b(L|l)abrador retriever(s)?\b/g, "$1abyrinth orbweaver$2");
+    v = v.replace(/\bRetriever(s)?\b/g, "Orbweaver$1");
+    v = v.replace(/\bretriever(s)?\b/g, "orbweaver$1");
+    v = v.replace(/\b(B|b)ulldog(s)?\b/g, "$1anded garden spider$2");
+    v = v.replace(/\b(B|b)order (C|c)ollie(s)?\b/g, "$1lack widow$3");
+    v = v.replace(/\b(B|b)oxer(s)?\b/g, "$1razilian salmon tarantula$2");
+    v = v.replace(/\b(T|t)errier(s)?\b/g, "$1arantula$2");
+    v = v.replace(/\b(C|c)orgi(s)?\b/g, "$1ommon house spider$2");
+    v = v.replace(/\bEar(s)?\b/g, "Pedipalp$1");
+    v = v.replace(/\bear(s)?\b/g, "pedipalp$1");
 
 
     //https://www.google.com/search?client=safari&rls=en&q=daschund&ie=UTF-8&oe=UTF-8
