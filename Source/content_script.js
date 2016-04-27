@@ -51,7 +51,7 @@ function replaceText(v)
     v = v.replace(/\bpup(s)?\b/g, "spiderling$1");
     v = v.replace(/\bPup(s)?\b/g, "Spiderling$1");
     v = v.replace(/\b(D|d)aschund(s)?\b/g, "$1olomedes spider$2");
-    v = v.replace(/\b(L|l)abrador retriever(s)?\b/g, "$1abyrinth orbweaver$2");
+    v = v.replace(/\b(L|l)abrador (R|r)etriever(s)?\b/g, "$1abyrinth orbweaver$3");
     v = v.replace(/\bRetriever(s)?\b/g, "Orbweaver$1");
     v = v.replace(/\bretriever(s)?\b/g, "orbweaver$1");
     v = v.replace(/\b(B|b)ulldog(s)?\b/g, "$1anded garden spider$2");
