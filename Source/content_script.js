@@ -62,7 +62,8 @@ function replaceText(v)
     v = v.replace(/\b(P|p)aw(s)?\b/g, "$1edipalp$2");
     v = v.replace(/\bear?\b/g, "seta");
     v = v.replace(/\bears?\b/g, "setae");
-
+    v = v.replace(/\bcanine(s)?\b/g, "arachnid$1");
+    v = v.replace(/\bCanine(s)?\b/g, "Arachnid$1");
 
     //https://www.google.com/search?client=safari&rls=en&q=daschund&ie=UTF-8&oe=UTF-8
     v = v.replace(/\b(P|p)upp(ies|y)\b/g, function(result) {
