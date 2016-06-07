@@ -93,7 +93,7 @@ function replaceText(v)
 }
 
 function checkForSpiders() {
-    var bodyText = document.body.innerText;
+    var bodyText = document.body.innerHTML;
 
     if(bodyText && bodyText.match(/\bdog(s)?\b/gi)) {
         return true;
