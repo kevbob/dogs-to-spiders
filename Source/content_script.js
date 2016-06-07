@@ -1,3 +1,5 @@
+var hasSpiders = false;
+
 function walk(rootNode)
 {
     // Find all the text nodes in rootNode
@@ -16,7 +18,11 @@ function walk(rootNode)
 }
 
 function handleText(textNode) {
-  textNode.nodeValue = replaceText(textNode.nodeValue);
+    
+    if(hasSpiders) {
+        textNode.nodeValue = replaceText(textNode.nodeValue);
+    }
+    
 }
 
 function replaceText(v)
@@ -26,6 +32,8 @@ function replaceText(v)
     v = v.replace(/\bdog(s)?\b/g, "spider$1");
     v = v.replace(/\bDoggy?\b/g, "Spider");
     v = v.replace(/\bdoggy?\b/g, "spider");
+    v = v.replace(/\bDoggie?\b/g, "Spider");
+    v = v.replace(/\bdogg?\b/g, "spider");
     v = v.replace(/\bfour-legged?\b/g, "eight-legged");
     v = v.replace(/\b(C|c)anine?\b/g, "$1anine");
     v = v.replace(/\bbark?\b/g, "hiss");
@@ -50,7 +58,7 @@ function replaceText(v)
     v = v.replace(/\bpooch?\b/g, "arachnid pal");
     v = v.replace(/\bpup(s)?\b/g, "spiderling$1");
     v = v.replace(/\bPup(s)?\b/g, "Spiderling$1");
-    v = v.replace(/\b(D|d)aschund(s)?\b/g, "$1olomedes spider$2");
+    v = v.replace(/\b(D|d)achshund(s)?\b/g, "$1ewdrop spider$2");
     v = v.replace(/\b(L|l)abrador (R|r)etriever(s)?\b/g, "$1abyrinth orbweaver$3");
     v = v.replace(/\bRetriever(s)?\b/g, "Orbweaver$1");
     v = v.replace(/\bretriever(s)?\b/g, "orbweaver$1");
@@ -84,10 +92,24 @@ function replaceText(v)
     return v;
 }
 
+function checkForSpiders() {
+    var bodyText = document.body.innerText;
+
+    if(bodyText && bodyText.match(/\bdog(s)?\b/gi)) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
 // The callback used for the document body and title observers
 function observerCallback(mutations) {
     var i;
-
+    
+    if(!hasSpiders) {
+        hasSpiders = checkForSpiders();
+    }
     mutations.forEach(function(mutation) {
         for (i = 0; i < mutation.addedNodes.length; i++) {
             if (mutation.addedNodes[i].nodeType === 3) {
@@ -111,9 +133,15 @@ function walkAndObserve(doc) {
     },
     bodyObserver, titleObserver;
 
+    if(!hasSpiders) {
+        hasSpiders = checkForSpiders();
+    }
+
     // Do the initial text replacements in the document body and title
-    walk(doc.body);
-    doc.title = replaceText(doc.title);
+    if(hasSpiders) {
+        walk(doc.body);
+        doc.title = replaceText(doc.title);
+    }
 
     // Observe the body so that we replace text in any added/modified nodes
     bodyObserver = new MutationObserver(observerCallback);
